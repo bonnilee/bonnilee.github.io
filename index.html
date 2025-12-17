@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Science Portfolio</title>
+  <title>Bonni Lynch | Data Science Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Reset & base */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f5f5f5; color: #333; }
-
-    /* Header */
+    body { font-family: Arial, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
     header { background: #4CAF50; color: white; padding: 60px 20px; text-align: center; }
     header h1 { font-size: 2.5em; margin-bottom: 10px; }
     header p { font-size: 1.2em; }
 
-    /* Navigation */
     nav { background: #333; }
-    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
     nav ul li { margin: 0 15px; }
     nav ul li a { color: white; text-decoration: none; padding: 15px 0; display: block; }
     nav ul li a:hover { color: #4CAF50; }
 
-    /* Sections */
     section { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-    section h2 { color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 20px; }
+    section h2 { color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 20px; display: flex; align-items: center; }
+    section h2 i { margin-right: 10px; }
 
-    /* Projects grid */
     .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .project-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
-    .project-card:hover { transform: translateY(-5px); }
+    .project-card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     .project-card h3 { margin-bottom: 10px; color: #333; }
     .project-card p { margin-bottom: 10px; font-size: 0.95em; }
     .project-card a { text-decoration: none; color: #4CAF50; font-weight: bold; }
     .project-card a:hover { text-decoration: underline; }
 
-    /* Footer */
-    footer { text-align: center; padding: 20px; margin-top: 40px; background: #eee; font-size: 0.9em; }
+    .badge { display: inline-block; padding: 5px 12px; margin: 2px; background: #4CAF50; color: white; border-radius: 5px; font-size: 0.8em; }
 
-    /* Badges */
-    .badge { display: inline-block; padding: 5px 10px; margin: 2px; background: #4CAF50; color: white; border-radius: 5px; font-size: 0.8em; }
+    .contact-icons a { margin-right: 15px; color: #333; font-size: 1.2em; transition: color 0.3s; }
+    .contact-icons a:hover { color: #4CAF50; }
+
+    footer { text-align: center; padding: 20px; margin-top: 40px; background: #eee; font-size: 0.9em; }
   </style>
 </head>
 <body>
@@ -57,7 +54,7 @@
 </nav>
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2><i class="fas fa-user"></i>About Me</h2>
   <p>Hello! I’m an aspiring Data Scientist with strong skills in Python, SQL, and machine learning. I enjoy solving problems, analyzing data, and building tools that turn raw data into actionable insights. I’m actively seeking opportunities as a Data Scientist, Machine Learning Engineer, or Data Analyst.</p>
   <p>
     <span class="badge">Python</span>
@@ -71,7 +68,7 @@
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+  <h2><i class="fas fa-project-diagram"></i>Projects</h2>
   <div class="projects">
 
     <div class="project-card">
@@ -79,7 +76,7 @@
       <p>Customer segmentation using RFM analysis, window functions, and conditional statements. Generates insights for marketing and loyalty programs.</p>
       <p><strong>Tech:</strong> SQL, SQLite, CLI, VS Code</p>
       <p><strong>Concepts:</strong> RFM analysis, customer segmentation, window functions</p>
-      <a href="#">View Repo</a>
+      <a href="https://github.com/bonnilee/sql-customer-segmentation" target="_blank">View Repo</a>
     </div>
 
     <div class="project-card">
@@ -87,7 +84,7 @@
       <p>Upload a PDF and search for word frequency by section. Detects headers, cleans text, and visualizes word counts.</p>
       <p><strong>Tech:</strong> Python, Flask, pdfminer.six, NLTK, Pandas, Matplotlib, HTML/CSS</p>
       <p><strong>Features:</strong> PDF parsing, NLP preprocessing, visualization</p>
-      <a href="#">View Repo</a>
+      <a href="https://github.com/bonnilee/pdf-word-search-flask" target="_blank">View Repo</a>
     </div>
 
     <div class="project-card">
@@ -95,25 +92,30 @@
       <p>Exploratory data analysis on Spotify songs. Analyzed trends, audio features, release dates, and platform presence correlations with streams.</p>
       <p><strong>Tech:</strong> Python, Pandas, Matplotlib, Seaborn</p>
       <p><strong>Concepts:</strong> EDA, visualization, correlation analysis, time-series trends</p>
-      <a href="#">View Repo</a>
+      <a href="https://github.com/bonnilee/spotify-2023-analysis" target="_blank">View Repo</a>
     </div>
 
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> lynchbonni@gmail.com</p>
-  <p><strong>LinkedIn:</strong> <a href="#">www.linkedin.com/in/bonni-lynch-b08a98305</a></p>
-  <p><strong>GitHub:</strong> <a href="#">https://github.com/bonnilee</a></p>
+  <h2><i class="fas fa-envelope"></i>Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:lynchbonni@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/bonni-lynch-b08a98305" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/bonnilee" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/bonnilee/career-artifacts/raw/main/Bonni_Lynch.resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i></a>
+    <a href="https://github.com/bonnilee/career-artifacts/raw/main/Bonni.Lynch.cover_letter.pdf" target="_blank" title="Cover Letter"><i class="fas fa-file-alt"></i></a>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 Your Name. Built with ❤️ using GitHub Pages.
+  &copy; 2025 Bonni Lynch. Built with ❤️ using GitHub Pages.
 </footer>
 
 </body>
 </html>
+
 
 
 
